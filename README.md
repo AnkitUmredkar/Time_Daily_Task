@@ -1,16 +1,27 @@
-# practice_of_lecture
+<h1 align="center"> 🔶🔸 5.1 Widget And Refactoring - Container 🔸🔶 </h1>
 
-A new Flutter project.
+<h3 align="center"> Task - 1, 2, 3 </h3>
 
-## Getting Started
+###
 
-This project is a starting point for a Flutter application.
+<h1 align="left"> </h1>
 
-A few resources to get you started if this is your first Flutter project:
+###
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<div align = "center">
+  <img align = "left" height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/60e5bf9e-d206-4c1d-bd10-57f79197f28d"/>
+  <img height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/aeaa3b69-7a6a-4deb-ac1a-0d4fcb1d451e"/>
+  <img align = "right" height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/b3ae7117-adb8-4714-80e8-b6410d434e8c"/>
+</div>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+###
+
+<div align = "center">
+<a align="left" href="https://github.com/AnkitUmredkar/E_commerce_ui_components/blob/master/lib/home/Chess/chess_board.dart">-> 📂 Go To Dart File 📂<-</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://github.com/AnkitUmredkar/E_commerce_ui_components/blob/master/lib/home/age_calculator/calculator.dart">-> 📂 Go To Dart File 📂 <-</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a align="right" href="https://github.com/AnkitUmredkar/E_commerce_ui_components/blob/master/lib/home/age_calculator/map_icons.dart">-> 📂 Go To Dart File 📂 <-</a>
+</div>
+
+###

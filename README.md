@@ -55,7 +55,7 @@ In Dart, a Future represents a value that may not be available yet. It encapsula
 ## Duration Calss
 The Duration class represents a span of time. It allows you to specify time durations in terms of hours, minutes, seconds, and milliseconds.    
 
-## Example
+### Example
 ```javascript
 import 'dart:async';
 import 'dart:io';
@@ -73,7 +73,7 @@ void main(){
 ## Future.delayed()
 Future.delayed() is a method in Dart that creates a future representing a delayed computation. It allows you to schedule a task to be executed after a specified duration of time has passed.  
 
-## Example
+### Example
 ```javascript
 import 'dart:async';
 import 'dart:io';
@@ -104,7 +104,7 @@ The await keyword is used to pause the execution of an asynchronous function unt
 
 When function call itself it's called recursion
 
-## Example
+### Example
 ```javascript
 import 'dart:async';
 import 'dart:io';
@@ -120,7 +120,7 @@ void main(){
 
 The Timer class is used to create a one-time or periodic timer. It allows you to schedule a callback function to be executed after a specified duration.
 
-## Example
+### Example
 ```javascript
 import 'dart:async';
 import 'dart:io';
@@ -136,7 +136,7 @@ void main(){
 
 Timer.periodic is a constructor in the Timer class in Dart that creates a periodic timer. It repeatedly calls a callback function at a specified interval until canceled.
 
-## Example
+### Example
 ```javascript
 import 'dart:async';
 import 'dart:io';

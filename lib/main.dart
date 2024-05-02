@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:practice_of_lecture/Practice/animated%20Search%20bar.dart';
+import 'package:practice_of_lecture/Timer_Daily_Task/digital_clock_app.dart';
 import 'Practice/Chip/basic_chip.dart';
 import 'Practice/dropdown_button.dart';
-import 'Practice/flutter_button.dart';
+import 'Timer_Daily_Task/flutter_button.dart';
 import 'Practice/range_slider.dart';
 import 'Practice/slider.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Buttons(), //------> TODO Paste here
+      home: DigitalClockApp(), //------> TODO Paste here
     );
   }
 }

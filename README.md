@@ -156,7 +156,7 @@ void main(){
 
 <div align = "center">
   <img align = "left" height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/c622151d-b70d-4070-ae32-6c23b51629b1"/>
-  <video height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/0a9e533d-34c4-41f4-837f-7bd058671cbb"/>
+  <video height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/b1ed589d-6256-4889-96df-e6f2fd5c34f7"/>
 </div>
 
 <div align = "center">
@@ -170,7 +170,7 @@ void main(){
 ###
 
 <div align = "center">
-  <video height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/b1ed589d-6256-4889-96df-e6f2fd5c34f7"/>
+  <video height="550" src=""/>
 </div>
 
 ###

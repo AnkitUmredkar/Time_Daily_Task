@@ -156,7 +156,7 @@ void main(){
 
 <div align = "center">
   <img align = "left" height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/c622151d-b70d-4070-ae32-6c23b51629b1"/>
-  <video height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/b1ed589d-6256-4889-96df-e6f2fd5c34f7"/>
+  <video height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/37d74621-095a-4210-b52d-24b95314eefe"/>
 </div>
 
 <div align = "center">
@@ -171,11 +171,22 @@ void main(){
 
 <div align = "center">
   <video height="550" src=""/>
+
 </div>
 
+<h1 align="center"> 🔶🔸 5.4 Analogue Clock 🔸🔶 </h1>
+
+<div align = "center">
+  <img align = "left" height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/57f7a7cd-92f7-4d18-8b55-d8538c527022"/>
+  <video height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/2d279489-ed79-4e85-850b-ffa077b00728"/>
+</div>
+
+<div align = "center">
+<a  href="https://github.com/AnkitUmredkar/Time_Daily_Task/blob/master/lib/Timer_Daily_Task/analog_clock_app.dart">-> 📂 Go To Dart File 📂<-</a>
+</div>
+  
 ###
 
 <h1 align="left"> </h1>
 
 ###
-

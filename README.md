@@ -1,11 +1,5 @@
 <h1 align="center"> 🔶🔸 Timer Daily Task 🔸🔶 </h1>
 
-###
-
-<h1 align="left"> </h1>
-
-###
-
 <div align = "center">
   <img align = "left" height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/60e5bf9e-d206-4c1d-bd10-57f79197f28d"/>
   <img height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/aeaa3b69-7a6a-4deb-ac1a-0d4fcb1d451e"/>
@@ -28,11 +22,13 @@
 
 ###
 
-<div align = "left">
+<h1 align="center"> 🔶🔸 5.1 Flutter Buttons 🔸🔶 </h1>
+
+<div align = "center">
   <img height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/43e38131-770e-41fe-a6d0-980c3e945d15"/>
 </div>
 
-<div align = "left">
+<div align = "center">
 <a  href="https://github.com/AnkitUmredkar/Time_Daily_Task/blob/master/lib/Practice/flutter_button.dart">-> 📂 Go To Dart File 📂<-</a>
 </div>
 
@@ -41,6 +37,8 @@
 <h1 align="left"> </h1>
 
 ###
+
+<h1 align="center"> 🔶🔸 5.2 Asynchronous Programming 🔸🔶 </h1>
 
 # What is  Asynchronous Programming?
 
@@ -147,3 +145,27 @@ void main(){
    });
 }
 ```
+
+###
+
+<h1 align="left"> </h1>
+
+###
+
+<h1 align="center"> 🔶🔸 5.3 Digital Clock App Page 🔸🔶 </h1>
+
+<div align = "center">
+  <video height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/2e33c40d-f935-4a9d-b63f-e59735c78df5"/>
+</div>
+
+
+<div align = "center">
+<a  href="https://github.com/AnkitUmredkar/Time_Daily_Task/blob/master/lib/Practice/flutter_button.dart">-> 📂 Go To Dart File 📂<-</a>
+</div>
+
+###
+
+<h1 align="left"> </h1>
+
+###
+

@@ -46,12 +46,15 @@ class _DigitalClockAppState extends State<DigitalClockApp> {
                           fontSize: 54,
                           fontWeight: FontWeight.bold),
                     ),
-                    Text(
-                      (dateTime.hour > 12) ? 'PM' : 'AM',
-                      style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
+                    Container(
+                      margin: const EdgeInsets.only(top: 20, left: 5),
+                      child: Text(
+                        (dateTime.hour > 12) ? 'PM' : 'AM',
+                        style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ],
                 ),

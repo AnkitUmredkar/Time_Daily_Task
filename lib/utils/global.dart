@@ -11,6 +11,14 @@ List days = [
   'Sunday',
 ];
 
+List img = [
+  'assets/bg.jpg',
+  'assets/bg2.jpg',
+  'assets/bg3.avif',
+];
+
+int index = 0;
+
 List month = [
   'January',
   'February',

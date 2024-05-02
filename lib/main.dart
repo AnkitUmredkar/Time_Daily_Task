@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AnalogClockApp(), //------> TODO Paste here
+      home: DigitalClockApp(), //------> TODO Paste here
     );
   }
 }

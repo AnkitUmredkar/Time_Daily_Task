@@ -25,9 +25,9 @@ class _AnalogClockAppState extends State<AnalogClockApp> {
         height: double.infinity,
         width: double.infinity,
         padding: const EdgeInsets.all(12),
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/bg.jpg'),
+            image: AssetImage(img[index]),
             fit: BoxFit.cover,
           ),
         ),
@@ -47,7 +47,7 @@ class _AnalogClockAppState extends State<AnalogClockApp> {
                           fontWeight: FontWeight.bold),
                     ),
                     Container(
-                      margin: const EdgeInsets.only(top: 20,left: 5),
+                      margin: const EdgeInsets.only(top: 20, left: 5),
                       child: Text(
                         (dateTime.hour > 12) ? 'PM' : 'AM',
                         style: const TextStyle(
@@ -145,18 +145,29 @@ class _AnalogClockAppState extends State<AnalogClockApp> {
             ),
             Align(
               alignment: Alignment.bottomCenter,
-              child: Container(
-                height: 60,
-                width: double.infinity,
-                alignment: Alignment.center,
-                margin: const EdgeInsets.only(left: 10, right: 10),
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white),
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                child: const Text(
-                  'Analogue Clock',
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+              child: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    if (index == 2) {
+                      index = 0;
+                    } else {
+                      index++;
+                    }
+                  });
+                },
+                child: Container(
+                  height: 60,
+                  width: double.infinity,
+                  alignment: Alignment.center,
+                  margin: const EdgeInsets.only(left: 10, right: 10),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.white),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: const Text(
+                    'Change Theme',
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
                 ),
               ),
             ),

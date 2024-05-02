@@ -24,9 +24,9 @@ class _DigitalClockAppState extends State<DigitalClockApp> {
         height: double.infinity,
         width: double.infinity,
         padding: const EdgeInsets.all(12),
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/bg.jpg'),
+            image: AssetImage(img[index]),
             fit: BoxFit.cover,
           ),
         ),
@@ -70,18 +70,29 @@ class _DigitalClockAppState extends State<DigitalClockApp> {
             ),
             Align(
               alignment: Alignment.bottomCenter,
-              child: Container(
-                height: 60,
-                width: double.infinity,
-                alignment: Alignment.center,
-                margin: const EdgeInsets.only(left: 10, right: 10),
-                decoration: BoxDecoration(
-                  border: Border.all(color: Colors.white),
-                  borderRadius: BorderRadius.circular(30),
-                ),
-                child: const Text(
-                  'Digital Clock',
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+              child: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    if (index == 2) {
+                      index = 0;
+                    } else {
+                      index++;
+                    }
+                  });
+                },
+                child: Container(
+                  height: 60,
+                  width: double.infinity,
+                  alignment: Alignment.center,
+                  margin: const EdgeInsets.only(left: 10, right: 10),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.white),
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                  child: const Text(
+                    'Change Theme',
+                    style: TextStyle(color: Colors.white, fontSize: 20),
+                  ),
                 ),
               ),
             ),

@@ -145,8 +145,8 @@ class _ButtonsState extends State<Buttons> {
                         ),
                         OutlinedButton(
                           style: OutlinedButton.styleFrom(
-                            // Change this color to whatever you want
-                          ),
+                              // Change this color to whatever you want
+                              ),
                           onPressed: () {},
                           child: const Text(
                             'Outlined',

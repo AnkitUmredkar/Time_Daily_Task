@@ -28,7 +28,6 @@ class _animatedSearchBarState extends State<animatedSearchBar> {
             Padding(
               padding: const EdgeInsets.only(left: 8.0),
               child: AnimatedSearchBar(
-
                 height: 50,
                 controller: TextEditingController(),
                 cursorColor: Colors.grey,
@@ -41,7 +40,8 @@ class _animatedSearchBarState extends State<animatedSearchBar> {
                   fillColor: Colors.red,
                   suffixIconColor: Colors.white,
                   alignLabelWithHint: true,
-                  contentPadding: EdgeInsets.symmetric(vertical: 8, horizontal: 8),
+                  contentPadding:
+                      EdgeInsets.symmetric(vertical: 8, horizontal: 8),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.all(Radius.circular(8)),
                   ),

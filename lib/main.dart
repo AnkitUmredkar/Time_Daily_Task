@@ -33,3 +33,5 @@ class MyApp extends StatelessWidget {
 //--->dropdownEffect()
 // TODO for Flutter Buttons
 //--->Buttons()
+// TODO for Digital Clock App
+//--->DigitalClockApp()

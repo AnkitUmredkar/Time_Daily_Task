@@ -43,7 +43,7 @@ class _DigitalClockAppState extends State<DigitalClockApp> {
                       '${(dateTime.hour % 12).toString().padLeft(2, '0')} : ${(dateTime.minute).toString().padLeft(2, '0')} : ${(dateTime.second).toString().padLeft(2, '0')}',
                       style: const TextStyle(
                           color: Colors.white,
-                          fontSize: 52,
+                          fontSize: 54,
                           fontWeight: FontWeight.bold),
                     ),
                     Text(

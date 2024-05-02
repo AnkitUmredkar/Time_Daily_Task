@@ -2,17 +2,17 @@ DateTime dateTime = DateTime.now();
 late String day;
 
 List days = [
-  'monday',
-  'tuesday',
-  'wednesday',
-  'thursday',
-  'friday',
-  'saturday',
-  'sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+  'Sunday',
 ];
 
 List month = [
-  'january',
+  'January',
   'February',
   'March',
   'April',

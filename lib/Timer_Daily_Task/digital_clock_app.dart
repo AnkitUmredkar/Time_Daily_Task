@@ -37,6 +37,7 @@ class _DigitalClockAppState extends State<DigitalClockApp> {
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
                       '${(dateTime.hour % 12).toString().padLeft(2, '0')} : ${(dateTime.minute).toString().padLeft(2, '0')} : ${(dateTime.second).toString().padLeft(2, '0')}',

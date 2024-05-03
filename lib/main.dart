@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: DigitalClockApp(), //------> TODO Paste here
+      home: AnalogClockApp(), //------> TODO Paste here
     );
   }
 }
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
 // TODO for RangeSlider
 //--->customRangeSlider()
 // TODO for DrpDownEffect
-//--->dropdownEffect(
+//--->dropdownEffect()
 // TODO for DrpDownEffect
 //--->dropdownEffect()
 // TODO for Flutter Buttons

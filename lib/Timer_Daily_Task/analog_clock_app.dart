@@ -47,7 +47,7 @@ class _AnalogClockAppState extends State<AnalogClockApp> {
                           fontWeight: FontWeight.bold),
                     ),
                     Container(
-                      margin: const EdgeInsets.only(top: 20, left: 5),
+                      margin: const EdgeInsets.only(top: 22, left: 6),
                       child: Text(
                         (dateTime.hour > 12) ? 'PM' : 'AM',
                         style: const TextStyle(
@@ -58,7 +58,7 @@ class _AnalogClockAppState extends State<AnalogClockApp> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 7),
+                const SizedBox(height: 6),
                 Text(
                   '${days[dateTime.weekday - 1]}  ${dateTime.day} ${month[dateTime.month - 1]}',
                   style: const TextStyle(
@@ -67,13 +67,13 @@ class _AnalogClockAppState extends State<AnalogClockApp> {
                       fontWeight: FontWeight.bold),
                 ),
                 Container(
-                  margin: const EdgeInsets.only(top: 150, bottom: 170),
+                  margin: const EdgeInsets.only(top: 120, bottom: 190),
                   height: 210,
                   width: 210,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(
-                      width: 2,
+                      width: 5,
                       color: Colors.white,
                     ),
                   ),
@@ -82,10 +82,10 @@ class _AnalogClockAppState extends State<AnalogClockApp> {
                     children: [
                       // TODO Dot
                       Container(
-                        height: 15,
-                        width: 15,
+                        height: 13,
+                        width: 13,
                         decoration: const BoxDecoration(
-                            color: Colors.white, shape: BoxShape.circle),
+                            color: Colors.red, shape: BoxShape.circle),
                       ),
                       // TODO Angles
                       ...List.generate(
@@ -94,15 +94,14 @@ class _AnalogClockAppState extends State<AnalogClockApp> {
                             angle: ((index + 1) * 6 * pi) / 180,
                             child: ((index + 1) % 5 == 0)
                                 ? const VerticalDivider(
-                                    thickness: 4,
+                                    thickness: 3,
                                     color: Colors.red,
-                                    endIndent: 190,
+                                    endIndent: 185,
                                   )
                                 : const VerticalDivider(
                                     thickness: 2,
-                                    color: Colors.white,
-                                    indent: 0,
-                                    endIndent: 200,
+                                    color: Colors.grey,
+                                    endIndent: 192,
                                   )),
                       ),
                       // TODO Hour
@@ -114,8 +113,8 @@ class _AnalogClockAppState extends State<AnalogClockApp> {
                         child: const VerticalDivider(
                           thickness: 4,
                           color: Colors.red,
-                          indent: 55,
-                          endIndent: 90,
+                          indent: 50,
+                          endIndent: 95,
                         ),
                       ),
                       // TODO Minute
@@ -125,7 +124,7 @@ class _AnalogClockAppState extends State<AnalogClockApp> {
                           thickness: 3,
                           color: Colors.white,
                           indent: 35,
-                          endIndent: 85,
+                          endIndent: 98,
                         ),
                       ),
                       // TODO Second
@@ -133,9 +132,9 @@ class _AnalogClockAppState extends State<AnalogClockApp> {
                         angle: (dateTime.second * 6 * pi) / 180,
                         child: const VerticalDivider(
                           thickness: 2,
-                          color: Colors.white,
+                          color: Colors.grey,
                           indent: 25,
-                          endIndent: 85,
+                          endIndent: 98,
                         ),
                       ),
                     ],

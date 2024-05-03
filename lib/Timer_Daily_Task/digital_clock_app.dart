@@ -37,7 +37,6 @@ class _DigitalClockAppState extends State<DigitalClockApp> {
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text(
                       '${(dateTime.hour % 12).toString().padLeft(2, '0')} : ${(dateTime.minute).toString().padLeft(2, '0')} : ${(dateTime.second).toString().padLeft(2, '0')}',
@@ -47,7 +46,7 @@ class _DigitalClockAppState extends State<DigitalClockApp> {
                           fontWeight: FontWeight.bold),
                     ),
                     Container(
-                      margin: const EdgeInsets.only(top: 20, left: 5),
+                      margin: const EdgeInsets.only(top: 22, left: 6),
                       child: Text(
                         (dateTime.hour > 12) ? 'PM' : 'AM',
                         style: const TextStyle(

@@ -1,27 +1,3 @@
-<h1 align="center"> 🔶🔸 Timer Daily Task 🔸🔶 </h1>
-
-<div align = "center">
-  <img align = "left" height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/60e5bf9e-d206-4c1d-bd10-57f79197f28d"/>
-  <img height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/aeaa3b69-7a6a-4deb-ac1a-0d4fcb1d451e"/>
-  <img align = "right" height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/b3ae7117-adb8-4714-80e8-b6410d434e8c"/>
-</div>
-
-###
-
-<div align = "center">
-<a align="left" href="https://github.com/AnkitUmredkar/Time_Daily_Task/blob/master/lib/Practice/slider.dart">-> 📂 Go To Dart File 📂<-</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://github.com/AnkitUmredkar/Time_Daily_Task/blob/master/lib/Practice/range_slider.dart">-> 📂 Go To Dart File 📂 <-</a>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a align="right" href="https://github.com/AnkitUmredkar/Time_Daily_Task/blob/master/lib/Practice/dropdown_button.dart">-> 📂 Go To Dart File 📂 <-</a>
-</div>
-
-###
-
-<h1 align="left"> </h1>
-
-###
-
 <h1 align="center"> 🔶🔸 5.1 Flutter Buttons 🔸🔶 </h1>
 
 <div align = "center">
@@ -186,6 +162,48 @@ void main(){
 <a  href="https://github.com/AnkitUmredkar/Time_Daily_Task/blob/master/lib/Timer_Daily_Task/analog_clock_app.dart">-> 📂 Go To Dart File 📂<-</a>
 </div>
   
+###
+
+<h1 align="left"> </h1>
+
+###
+
+<h1 align="center"> 🔶🔸 5.4 Analogue Clock 🔸🔶 </h1>
+
+<div align = "center">
+  <img align = "left" height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/0139a114-dd53-4f74-94d3-f8bea7409b4b"/>
+  <video height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/0bcfed8c-c69e-4fe6-a9ba-38a0205bc7aa"/>
+</div>
+
+
+<div align = "center">
+<a  href="https://github.com/AnkitUmredkar/Time_Daily_Task/blob/master/lib/Timer_Daily_Task/analog_clock_app.dart">-> 📂 Go To Dart File 📂<-</a>
+</div>
+
+###
+
+<h1 align="left"> </h1>
+
+###
+
+<h1 align="center"> 🔶🔸 Practice 🔸🔶 </h1>
+
+<div align = "center">
+  <img align = "left" height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/60e5bf9e-d206-4c1d-bd10-57f79197f28d"/>
+  <img height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/aeaa3b69-7a6a-4deb-ac1a-0d4fcb1d451e"/>
+  <img align = "right" height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/b3ae7117-adb8-4714-80e8-b6410d434e8c"/>
+</div>
+
+###
+
+<div align = "center">
+<a align="left" href="https://github.com/AnkitUmredkar/Time_Daily_Task/blob/master/lib/Practice/slider.dart">-> 📂 Go To Dart File 📂<-</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://github.com/AnkitUmredkar/Time_Daily_Task/blob/master/lib/Practice/range_slider.dart">-> 📂 Go To Dart File 📂 <-</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a align="right" href="https://github.com/AnkitUmredkar/Time_Daily_Task/blob/master/lib/Practice/dropdown_button.dart">-> 📂 Go To Dart File 📂 <-</a>
+</div>
+
 ###
 
 <h1 align="left"> </h1>

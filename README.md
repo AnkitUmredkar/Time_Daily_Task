@@ -168,7 +168,7 @@ void main(){
 
 ###
 
-<h1 align="center"> 🔶🔸 5.4 Analogue Clock 🔸🔶 </h1>
+<h1 align="center"> 🔶🔸 5.5 Strap Watch 🔸🔶 </h1>
 
 <div align = "center">
   <img align = "left" height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/0139a114-dd53-4f74-94d3-f8bea7409b4b"/>

@@ -18,6 +18,7 @@ List img = [
 ];
 
 int index = 0;
+double second = 0;
 
 List month = [
   'January',

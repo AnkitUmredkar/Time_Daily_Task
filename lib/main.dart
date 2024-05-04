@@ -7,6 +7,7 @@ import 'Timer_Daily_Task/analog_clock_app.dart';
 import 'Timer_Daily_Task/flutter_button.dart';
 import 'Practice/range_slider.dart';
 import 'Practice/slider.dart';
+import 'Timer_Daily_Task/strapwatch.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AnalogClockApp(), //------> TODO Paste here
+      home: StrapWatch(), //------> TODO Paste here
     );
   }
 }
@@ -38,3 +39,5 @@ class MyApp extends StatelessWidget {
 //--->DigitalClockApp()
 // TODO for Analog Clock App
 //--->AnalogClockApp()
+// TODO for Strap Watch App
+//--->StrapWatch()

@@ -40,7 +40,7 @@ class _AnalogClockAppState extends State<AnalogClockApp> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      '${(dateTime.hour % 12).toString().padLeft(2, '0')} : ${(dateTime.minute).toString().padLeft(2, '0')} : ${(dateTime.second).toString().padLeft(2, '0')}',
+                      '${(dateTime.hour > 12) ? (dateTime.hour % 12).toString().padLeft(2, '0') : (dateTime.hour).toString().padLeft(2, '0')} : ${(dateTime.minute).toString().padLeft(2, '0')} : ${(dateTime.second).toString().padLeft(2, '0')}',
                       style: const TextStyle(
                           color: Colors.white,
                           fontSize: 52,
@@ -91,18 +91,19 @@ class _AnalogClockAppState extends State<AnalogClockApp> {
                       ...List.generate(
                         60,
                         (index) => Transform.rotate(
-                            angle: ((index + 1) * 6 * pi) / 180,
-                            child: ((index + 1) % 5 == 0)
-                                ? const VerticalDivider(
-                                    thickness: 3,
-                                    color: Colors.red,
-                                    endIndent: 185,
-                                  )
-                                : const VerticalDivider(
-                                    thickness: 2,
-                                    color: Colors.grey,
-                                    endIndent: 192,
-                                  )),
+                          angle: ((index) * 6 * pi) / 180,
+                          child: ((index) % 5 == 0)
+                              ? const VerticalDivider(
+                                  thickness: 3,
+                                  color: Colors.red,
+                                  endIndent: 185,
+                                )
+                              : const VerticalDivider(
+                                  thickness: 2,
+                                  color: Colors.grey,
+                                  endIndent: 192,
+                                ),
+                        ),
                       ),
                       // TODO Hour
                       Transform.rotate(

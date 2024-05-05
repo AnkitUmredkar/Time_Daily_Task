@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:practice_of_lecture/Practice/animated%20Search%20bar.dart';
+import 'package:practice_of_lecture/Timer%20App/digital_clock_page.dart';
 import 'package:practice_of_lecture/Timer_Daily_Task/digital_clock_app.dart';
 import 'Practice/Chip/basic_chip.dart';
 import 'Practice/dropdown_button.dart';
+import 'Timer App/analogue_clock_page.dart';
+import 'Timer App/strap_watch_page.dart';
 import 'Timer_Daily_Task/analog_clock_app.dart';
 import 'Timer_Daily_Task/flutter_button.dart';
 import 'Practice/range_slider.dart';
@@ -18,9 +21,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: StrapWatch(), //------> TODO Paste here
+      routes: {
+        '/': (context) => const DigitalClockPage(),
+        '/AnalogueClock': (context) => const AnalogueClockPage(),
+        '/StrapWatch': (context) => const StrapWatchPage(),
+      },
+      // home : DigitalClockApp(), //------> TODO Paste here
     );
   }
 }

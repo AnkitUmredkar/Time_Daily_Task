@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 DateTime dateTime = DateTime.now();
 late String day;
 
@@ -34,3 +36,21 @@ List month = [
   'November',
   'December',
 ];
+
+Column buildIconWithText({required IconData icon, required String data}) {
+  return Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Icon(
+        icon,
+        color: Colors.grey,
+      ),
+      Text(
+        data,
+        style: const TextStyle(
+          color: Colors.grey,
+        ),
+      )
+    ],
+  );
+}

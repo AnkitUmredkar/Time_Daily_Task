@@ -190,8 +190,8 @@ void main(){
 
 <div align = "center">
   <img align = "left" height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/3178c2a8-d99d-45b1-a2a2-027bb0ce1775"/>
-  <img align = "left" height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/2c7b9a6a-71a4-46c3-845e-bfbee3df5185"/>
-  <img align = "left" height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/ee273a92-e542-4df3-bdb4-4089c42e27d5"/>
+  <img height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/2c7b9a6a-71a4-46c3-845e-bfbee3df5185"/>
+  <img align = "right" height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/ee273a92-e542-4df3-bdb4-4089c42e27d5"/>
 </div>
 
 <div align = "center">

@@ -201,12 +201,6 @@ void main(){
   <video height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/0bcfed8c-c69e-4fe6-a9ba-38a0205bc7aa"/>
 </div>
 
-
-
-<div align = "center">
-<a  href="https://github.com/AnkitUmredkar/Time_Daily_Task/blob/master/lib/Timer_Daily_Task/strapwatch.dart">-> 📂 Go To Dart File 📂<-</a>
-</div>
-
 ###
 
 <h1 align="left"> </h1>

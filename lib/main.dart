@@ -4,6 +4,7 @@ import 'package:practice_of_lecture/Timer%20App/digital_clock_page.dart';
 import 'package:practice_of_lecture/Timer_Daily_Task/digital_clock_app.dart';
 import 'Practice/Chip/basic_chip.dart';
 import 'Practice/dropdown_button.dart';
+import 'Practice/my.dart';
 import 'Timer App/analogue_clock_page.dart';
 import 'Timer App/strap_watch_page.dart';
 import 'Timer_Daily_Task/analog_clock_app.dart';
@@ -23,12 +24,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      routes: {
-        '/': (context) => const DigitalClockPage(),
-        '/AnalogueClock': (context) => const AnalogueClockPage(),
-        '/StrapWatch': (context) => const StrapWatchPage(),
-      },
-      // home : DigitalClockApp(), //------> TODO Paste here
+      // routes: {
+      //   '/': (context) => const DigitalClockPage(),
+      //   '/AnalogueClock': (context) => const AnalogueClockPage(),
+      //   '/StrapWatch': (context) => const StrapWatchPage(),
+      // },
+      home : MyClock(), //------> TODO Paste here
     );
   }
 }
@@ -49,3 +50,5 @@ class MyApp extends StatelessWidget {
 //--->AnalogClockApp()
 // TODO for Strap Watch App
 //--->StrapWatch()
+// TODO for ORG Clock
+//--->MyClock()

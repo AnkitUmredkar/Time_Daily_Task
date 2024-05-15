@@ -168,7 +168,7 @@ void main(){
 
 ###
 
-<h1 align="center"> 🔶🔸 5.5 Strap Watch 🔸🔶 </h1>
+<h1 align="center"> 🔶🔸 Strap Watch 🔸🔶 </h1>
 
 <div align = "center">
   <img align = "left" height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/0139a114-dd53-4f74-94d3-f8bea7409b4b"/>
@@ -185,6 +185,29 @@ void main(){
 <h1 align="left"> </h1>
 
 ###
+
+<h1 align="center"> 🔶🔸 Timer App 🔸🔶 </h1>
+
+<div align = "center">
+  <img align = "left" height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/3178c2a8-d99d-45b1-a2a2-027bb0ce1775"/>
+  <img height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/2c7b9a6a-71a4-46c3-845e-bfbee3df5185"/>
+  <img align = "right" height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/ee273a92-e542-4df3-bdb4-4089c42e27d5"/>
+</div>
+
+<div align = "center">
+<a href="https://github.com/AnkitUmredkar/Time_Daily_Task/tree/master/lib/Timer%20App">-> 📂 Go To Dart File 📂<-</a>
+
+<div align = "center">
+  <video height="550" src="https://github.com/AnkitUmredkar/Time_Daily_Task/assets/149374001/52edb2df-4433-434b-9326-962d8b3d31aa"/>
+</div>
+
+
+###
+
+<h1 align="left"> </h1>
+
+###
+
 
 <h1 align="center"> 🔶🔸 Practice 🔸🔶 </h1>
 

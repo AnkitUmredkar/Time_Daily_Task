@@ -43,8 +43,8 @@ class _MyClockState extends State<MyClock> {
                 ),
                 Container(
                   height: height * 0.11,
-                  width: width * 0.91,
-                  margin: EdgeInsets.only(top: height * 0.07),
+                  width: width,
+                  margin: EdgeInsets.only(top: height * 0.07,left: 8,right: 8),
                   padding: const EdgeInsets.fromLTRB(18, 10, 18, 10),
                   decoration: BoxDecoration(
                     color: bgColor,

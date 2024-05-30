@@ -210,8 +210,7 @@ class _TimerState extends State<Timer> {
                 const Spacer(),
                 (isStart)
                     ? Padding(
-                        padding:
-                            const EdgeInsets.only(left: 8, right: 8),
+                        padding: const EdgeInsets.only(left: 8, right: 8),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [

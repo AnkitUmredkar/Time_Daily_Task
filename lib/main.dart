@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:practice_of_lecture/Clock_App/stop_watch.dart';
 import 'package:practice_of_lecture/Practice/animated%20Search%20bar.dart';
 import 'package:practice_of_lecture/Timer%20App/digital_clock_page.dart';
 import 'package:practice_of_lecture/Timer_Daily_Task/digital_clock_app.dart';
 import 'Practice/Chip/basic_chip.dart';
 import 'Practice/dropdown_button.dart';
-import 'Practice/my.dart';
+import 'Clock_App/my.dart';
 import 'Timer App/analogue_clock_page.dart';
 import 'Timer App/strap_watch_page.dart';
 import 'Timer_Daily_Task/analog_clock_app.dart';
@@ -22,6 +24,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+    ]);
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       // routes: {
@@ -29,7 +34,11 @@ class MyApp extends StatelessWidget {
       //   '/AnalogueClock': (context) => const AnalogueClockPage(),
       //   '/StrapWatch': (context) => const StrapWatchPage(),
       // },
-      home : MyClock(), //------> TODO Paste here
+      //------> TODO Paste here
+      routes: {
+        '/': (context) => const MyClock(),
+        '/Timer': (context) => const Timer(),
+      },
     );
   }
 }

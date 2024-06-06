@@ -1,39 +1,33 @@
+import 'dart:async';
 import 'dart:math';
 import 'dart:async' as async;
 import 'package:flutter/material.dart';
-import 'package:practice_of_lecture/utils/global.dart';
 import 'global.dart';
 
 Stopwatch stopWatch = Stopwatch();
-ScrollController scrollController = ScrollController();
-bool isRunning = true;
 
-class StopWatch extends StatefulWidget {
-  const StopWatch({super.key});
+class timerPage extends StatefulWidget {
+  const timerPage({super.key});
 
   @override
-  State<StopWatch> createState() => _StopWatchState();
+  State<timerPage> createState() => _timerPageState();
 }
 
-class _StopWatchState extends State<StopWatch> {
-  void handleStartStop() {
-    if (stopWatch.isRunning) {
-      stopWatch.stop();
-    } else {
-      stopWatch.start();
-    }
-  }
+class _timerPageState extends State<timerPage> {
+  int counter = 15;
+  late Timer timer;
 
-  String returnFormattedText() {
-    var milli = stopWatch.elapsed.inMilliseconds;
-    String milliSeconds = (milli % 1000).toString().padLeft(3, '0');
-    String seconds = ((milli / 1000) % 60).toInt().toString().padLeft(2, '0');
-    round = int.parse(seconds);
-    String minutes = ((milli / 1000) / 60).toInt().toString().padLeft(2, '0');
-    String houre =
-        (((milli / 1000) / 60) / 60).toInt().toString().padLeft(2, '0');
-    lapTime = '$houre : $minutes : $seconds';
-    return '$houre : $minutes : $seconds : $milliSeconds';
+  void startTimer() {
+    timer = async.Timer.periodic(const Duration(seconds: 1), (timer) {
+      if (counter > 0) {
+        setState(() {
+          counter--;
+        });
+      } else {
+        _isStart = false;
+        timer.cancel();
+      }
+    });
   }
 
   @override
@@ -63,7 +57,7 @@ class _StopWatchState extends State<StopWatch> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        'StopWatch',
+                        'Timer',
                         style: TextStyle(
                             fontSize: width * 0.078,
                             fontWeight: FontWeight.bold,
@@ -106,6 +100,7 @@ class _StopWatchState extends State<StopWatch> {
                   child: Container(
                     height: clockSize,
                     width: clockSize,
+                    padding: const EdgeInsets.all(14),
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       gradient: const LinearGradient(
@@ -136,7 +131,8 @@ class _StopWatchState extends State<StopWatch> {
                         Align(
                           alignment: Alignment.center,
                           child: Text(
-                            returnFormattedText(),
+                            // returnFormattedText(),
+                            '$counter',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontWeight: FontWeight.bold,
@@ -148,82 +144,119 @@ class _StopWatchState extends State<StopWatch> {
                           (index) => Transform.rotate(
                             angle: ((index) * 6 * pi) / 180,
                             child: VerticalDivider(
-                              indent: clockSize * 0.04,
-                              endIndent: clockSize * 0.935,
+                              indent: clockSize * 0.001,
+                              endIndent: clockSize * 0.9,
                               width: 20,
                               thickness: 3,
                               color: Colors.grey,
                             ),
                           ),
                         ),
-                        Transform.rotate(
-                          angle: (round * 6 * pi) / 180,
-                          child: VerticalDivider(
+                        Container(
+                          margin: const EdgeInsets.all(2),
+                          height: clockSize,
+                          width: clockSize,
+                          child: CircularProgressIndicator(
                             color: Colors.white,
-                            thickness: 6,
-                            indent: clockSize * 0.09,
-                            endIndent: clockSize * 0.895,
+                            value: 0.5,
+                            strokeWidth: 6,
                           ),
                         ),
                       ],
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 8, right: 9),
-                  child: Container(
-                    height: height * 0.205,
-                    width: width,
-                    padding: const EdgeInsets.all(8),
-                    child: SingleChildScrollView(
-                      physics: const BouncingScrollPhysics(),
-                      child: Column(
-                        children: List.generate(
-                            lapList.length,
-                            (index) => Padding(
-                                  padding: const EdgeInsets.only(bottom: 8.0),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      Text(
-                                        (lapList.length - index)
-                                            .toString()
-                                            .padLeft(2, '0'),
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: width * 0.051),
-                                      ),
-                                      Text(
-                                        lapList[lapList.length-index-1],
-                                        style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: width * 0.051),
-                                      ),
-                                    ],
-                                  ),
-                                )),
-                      ),
-                    ),
+                SizedBox(
+                  height: height * 0.04,
+                ),
+                AnimatedContainer(
+                  duration: const Duration(milliseconds: 300),
+                  height: 51,
+                  width: 51,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: bgColor,
+                    boxShadow: [
+                            const BoxShadow(
+                              color: Colors.black,
+                              blurRadius: 5,
+                              spreadRadius: 1,
+                              offset: Offset(-2, -2),
+                            ),
+                            BoxShadow(
+                              color: Colors.grey.shade800,
+                              blurRadius: 5,
+                              spreadRadius: 1,
+                              offset: const Offset(2, 2),
+                            ),
+                          ],
+                  ),
+                  child: const Icon(
+                    Icons.add,
+                    color: Colors.white,
                   ),
                 ),
-                (isStart)
+                SizedBox(
+                  height: height * 0.12,
+                ),
+                //todo -----------------------------------------------------> Start Button
+                (_isStart)
                     ? Padding(
                         padding: const EdgeInsets.only(left: 8, right: 8),
                         child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Expanded(
                               child: GestureDetector(
                                 onTap: () {
                                   setState(() {
-                                    if (isPause) {
-                                      stopWatch = Stopwatch();
-                                      isStart = false;
-                                      isPause = false;
-                                      lapList.clear();
+                                    counter = 0;
+                                    _isStart = false;
+                                    _isPause = false;
+                                  });
+                                },
+                                child: AnimatedContainer(
+                                  duration: const Duration(milliseconds: 300),
+                                  height: height * 0.06,
+                                  width: width * 0.6,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    color: bgColor,
+                                    borderRadius: BorderRadius.circular(10),
+                                    boxShadow: [
+                                      const BoxShadow(
+                                        color: Colors.black,
+                                        blurRadius: 5,
+                                        spreadRadius: 1,
+                                        offset: Offset(-3, -3),
+                                      ),
+                                      BoxShadow(
+                                        color: Colors.grey.shade800,
+                                        blurRadius: 5,
+                                        spreadRadius: 1,
+                                        offset: const Offset(2, 2),
+                                      ),
+                                    ],
+                                  ),
+                                  child: Text(
+                                    'Cancel',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: width * 0.05),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: width * 0.055),
+                            Expanded(
+                              child: GestureDetector(
+                                onTap: () {
+                                  setState(() {
+                                    _isPause = !_isPause;
+                                    if (_isPause) {
+                                      timer.cancel();
                                     } else {
-                                      lapList.add(lapTime);
+                                      startTimer();
                                     }
                                   });
                                 },
@@ -250,48 +283,7 @@ class _StopWatchState extends State<StopWatch> {
                                     ],
                                   ),
                                   child: Text(
-                                    (isPause) ? 'Restart' : 'Lap',
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: width * 0.05),
-                                  ),
-                                ),
-                              ),
-                            ),
-                            SizedBox(width: width * 0.055),
-                            Expanded(
-                              child: GestureDetector(
-                                onTap: () {
-                                  setState(() {
-                                    handleStartStop();
-                                    isPause = !isPause;
-                                  });
-                                },
-                                child: AnimatedContainer(
-                                  duration: const Duration(milliseconds: 300),
-                                  height: height * 0.06,
-                                  alignment: Alignment.center,
-                                  decoration: BoxDecoration(
-                                    color: bgColor,
-                                    borderRadius: BorderRadius.circular(10),
-                                    boxShadow: [
-                                      const BoxShadow(
-                                        color: Colors.black,
-                                        blurRadius: 5,
-                                        spreadRadius: 1,
-                                        offset: Offset(-3, -3),
-                                      ),
-                                      BoxShadow(
-                                        color: Colors.grey.shade800,
-                                        blurRadius: 5,
-                                        spreadRadius: 1,
-                                        offset: const Offset(2, 2),
-                                      ),
-                                    ],
-                                  ),
-                                  child: Text(
-                                    (isPause) ? 'Resume' : 'Pause',
+                                    (_isPause) ? 'Resume' : 'Pause',
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontWeight: FontWeight.bold,
@@ -305,13 +297,17 @@ class _StopWatchState extends State<StopWatch> {
                       )
                     : GestureDetector(
                         onTap: () {
-                          handleStartStop();
-                          isStart = true;
+                          setState(() {
+                            if (counter != 0) {
+                              _isStart = true;
+                              startTimer();
+                            }
+                          });
                         },
                         child: AnimatedContainer(
                           duration: const Duration(milliseconds: 300),
                           height: height * 0.06,
-                          width: width * 0.65,
+                          width: width * 0.6,
                           alignment: Alignment.center,
                           decoration: BoxDecoration(
                             color: bgColor,
@@ -340,7 +336,7 @@ class _StopWatchState extends State<StopWatch> {
                           ),
                         ),
                       ),
-                SizedBox(height: height * 0.039),
+                const Spacer(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -348,23 +344,21 @@ class _StopWatchState extends State<StopWatch> {
                       onTap: () {
                         Navigator.of(context).pushNamed('/');
                       },
-                      child: bottomButton(Icons.schedule_outlined, 1, 2),
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).pushNamed('/StopWatch');
-                      },
-                      child: bottomButton(Icons.timer_outlined, 2, 2),
+                      child: bottomButton(Icons.schedule_outlined, 1, 3),
                     ),
                     GestureDetector(
                       onTap: () {
                         Navigator.of(context).pushNamed('/Timer');
                       },
-                      child: bottomButton(Icons.alarm_outlined, 3, 2),
+                      child: bottomButton(Icons.timer_outlined, 2, 3),
                     ),
                     GestureDetector(
                       onTap: () {},
-                      child: bottomButton(Icons.more_time_outlined, 4, 2),
+                      child: bottomButton(Icons.alarm_outlined, 3, 3),
+                    ),
+                    GestureDetector(
+                      onTap: () {},
+                      child: bottomButton(Icons.more_time_outlined, 4, 3),
                     ),
                   ],
                 ),
@@ -379,3 +373,4 @@ class _StopWatchState extends State<StopWatch> {
 }
 
 int round = 0;
+bool _isStart = false, _isPause = false;

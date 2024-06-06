@@ -1,9 +1,12 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:practice_of_lecture/Clock_App/stop_watch.dart';
 import 'package:practice_of_lecture/Practice/animated%20Search%20bar.dart';
 import 'package:practice_of_lecture/Timer%20App/digital_clock_page.dart';
 import 'package:practice_of_lecture/Timer_Daily_Task/digital_clock_app.dart';
+import 'Clock_App/timer.dart';
 import 'Practice/Chip/basic_chip.dart';
 import 'Practice/dropdown_button.dart';
 import 'Clock_App/my.dart';
@@ -37,7 +40,8 @@ class MyApp extends StatelessWidget {
       //------> TODO Paste here
       routes: {
         '/': (context) => const MyClock(),
-        '/Timer': (context) => const Timer(),
+        '/StopWatch': (context) => const StopWatch(),
+        '/Timer': (context) => const timerPage(),
       },
     );
   }

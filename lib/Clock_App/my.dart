@@ -122,7 +122,7 @@ class _MyClockState extends State<MyClock> {
                     ],
                   ),
                 ),
-                Spacer(),
+                const Spacer(),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -134,12 +134,14 @@ class _MyClockState extends State<MyClock> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.of(context).pushNamed('/Timer');
+                        Navigator.of(context).pushNamed('/StopWatch');
                       },
                       child: bottomButton(Icons.timer_outlined, 2, 1),
                     ),
                     GestureDetector(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).pushNamed('/Timer');
+                      },
                       child: bottomButton(Icons.alarm_outlined, 3, 1),
                     ),
                     GestureDetector(

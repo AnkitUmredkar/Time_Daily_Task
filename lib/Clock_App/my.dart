@@ -19,8 +19,14 @@ class _MyClockState extends State<MyClock> {
       });
     });
 
-    double width = MediaQuery.of(context).size.width;
-    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery
+        .of(context)
+        .size
+        .width;
+    double height = MediaQuery
+        .of(context)
+        .size
+        .height;
     double clockSize = min(width * 0.8, height * 0.4);
     return SafeArea(
       child: Scaffold(
@@ -44,7 +50,8 @@ class _MyClockState extends State<MyClock> {
                 Container(
                   height: height * 0.11,
                   width: width,
-                  margin: EdgeInsets.only(top: height * 0.07,left: 8,right: 8),
+                  margin: EdgeInsets.only(
+                      top: height * 0.07, left: 8, right: 8),
                   padding: const EdgeInsets.fromLTRB(18, 10, 18, 10),
                   decoration: BoxDecoration(
                     color: bgColor,
@@ -88,7 +95,13 @@ class _MyClockState extends State<MyClock> {
                       Row(
                         children: [
                           Text(
-                            '${(dateTime.hour > 12) ? (dateTime.hour % 12).toString().padLeft(2, '0') : (dateTime.hour).toString().padLeft(2, '0')} : ${(dateTime.minute).toString().padLeft(2, '0')}',
+                            '${(dateTime.hour > 12) ? (dateTime.hour % 12)
+                                .toString()
+                                .padLeft(2, '0') : (dateTime.hour)
+                                .toString()
+                                .padLeft(2, '0')} : ${(dateTime.minute)
+                                .toString()
+                                .padLeft(2, '0')}',
                             style: TextStyle(
                                 color: Colors.white,
                                 fontSize: width * 0.08,

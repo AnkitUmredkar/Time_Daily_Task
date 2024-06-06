@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 DateTime dateTime = DateTime.now();
 Color bgColor = const Color(0xFF1A1A1A);
 int checkIndex = 1;
-bool isStart = false, isPause = false;
+bool isStart = false,
+    isPause = false;
 List lapList = [];
 String lapTime = '';
 
@@ -121,28 +122,29 @@ Container buildContainer(double clockSize) {
         ),
         ...List.generate(
           60,
-          (index) => Transform.rotate(
-            angle: ((index) * 6 * pi) / 180,
-            child: (index % 5 == 0)
-                ? VerticalDivider(
-                    indent: clockSize * 0.04,
-                    endIndent: clockSize * 0.93,
-                    width: 20,
-                    thickness: 3,
-                    color: Colors.grey,
-                  )
-                : VerticalDivider(
-                    indent: clockSize * 0.04,
-                    endIndent: clockSize * 0.92,
-                    color: const Color(0xFF1A1A1A),
-                  ),
-          ),
+              (index) =>
+              Transform.rotate(
+                angle: ((index) * 6 * pi) / 180,
+                child: (index % 5 == 0)
+                    ? VerticalDivider(
+                  indent: clockSize * 0.04,
+                  endIndent: clockSize * 0.93,
+                  width: 20,
+                  thickness: 3,
+                  color: Colors.grey,
+                )
+                    : VerticalDivider(
+                  indent: clockSize * 0.04,
+                  endIndent: clockSize * 0.92,
+                  color: const Color(0xFF1A1A1A),
+                ),
+              ),
         ),
         Container(
           height: 15,
           width: 15,
           decoration:
-              const BoxDecoration(shape: BoxShape.circle, color: Colors.red),
+          const BoxDecoration(shape: BoxShape.circle, color: Colors.red),
         ),
         Transform.rotate(
           angle: ((dateTime.hour + (dateTime.minute / 60)) * 30 * pi / 180),
@@ -237,27 +239,28 @@ SizedBox buildSizedBox() {
         ),
         ...List.generate(
           60,
-          (index) => Transform.rotate(
-            angle: ((index) * 6 * pi) / 180,
-            child: (index % 5 == 0)
-                ? const VerticalDivider(
-                    indent: 10,
-                    endIndent: 300,
-                    width: 20,
-                    thickness: 3,
-                    color: Colors.grey,
-                  )
-                : const VerticalDivider(
-                    endIndent: 400,
-                    color: Color(0xFF1A1A1A),
-                  ),
-          ),
+              (index) =>
+              Transform.rotate(
+                angle: ((index) * 6 * pi) / 180,
+                child: (index % 5 == 0)
+                    ? const VerticalDivider(
+                  indent: 10,
+                  endIndent: 300,
+                  width: 20,
+                  thickness: 3,
+                  color: Colors.grey,
+                )
+                    : const VerticalDivider(
+                  endIndent: 400,
+                  color: Color(0xFF1A1A1A),
+                ),
+              ),
         ),
         Container(
           height: 15,
           width: 15,
           decoration:
-              const BoxDecoration(shape: BoxShape.circle, color: Colors.red),
+          const BoxDecoration(shape: BoxShape.circle, color: Colors.red),
         ),
         Transform.rotate(
           angle: ((dateTime.hour + (dateTime.minute / 60)) * 30 * pi / 180),
@@ -303,19 +306,19 @@ AnimatedContainer bottomButton(var icon, int pageIndex, int checkIndex) {
       boxShadow: pageIndex == checkIndex
           ? null
           : [
-              const BoxShadow(
-                color: Colors.black,
-                blurRadius: 5,
-                spreadRadius: 1,
-                offset: Offset(-2, -2),
-              ),
-              BoxShadow(
-                color: Colors.grey.shade800,
-                blurRadius: 5,
-                spreadRadius: 1,
-                offset: const Offset(2, 2),
-              ),
-            ],
+        const BoxShadow(
+          color: Colors.black,
+          blurRadius: 5,
+          spreadRadius: 1,
+          offset: Offset(-2, -2),
+        ),
+        BoxShadow(
+          color: Colors.grey.shade800,
+          blurRadius: 5,
+          spreadRadius: 1,
+          offset: const Offset(2, 2),
+        ),
+      ],
     ),
     child: Icon(
       icon,

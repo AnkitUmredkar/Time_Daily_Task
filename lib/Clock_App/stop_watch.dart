@@ -139,7 +139,6 @@ class _StopWatchState extends State<StopWatch> {
                             returnFormattedText(),
                             style: TextStyle(
                                 color: Colors.white,
-                                fontWeight: FontWeight.bold,
                                 fontSize: clockSize * 0.0975),
                           ),
                         ),
@@ -350,12 +349,7 @@ class _StopWatchState extends State<StopWatch> {
                       },
                       child: bottomButton(Icons.schedule_outlined, 1, 2),
                     ),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).pushNamed('/StopWatch');
-                      },
-                      child: bottomButton(Icons.timer_outlined, 2, 2),
-                    ),
+                    bottomButton(Icons.timer_outlined, 2, 2),
                     GestureDetector(
                       onTap: () {
                         Navigator.of(context).pushNamed('/Timer');

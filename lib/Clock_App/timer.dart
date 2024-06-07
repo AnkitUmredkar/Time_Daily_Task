@@ -14,13 +14,22 @@ class timerPage extends StatefulWidget {
 }
 
 class _timerPageState extends State<timerPage> {
-  int counter = 15;
   late Timer timer;
 
   void startTimer() {
     timer = async.Timer.periodic(const Duration(seconds: 1), (timer) {
       if (counter > 0) {
         setState(() {
+          if (counter % 60 == 0) {
+            minute--;
+          }
+
+          if (minute == checkMinute) {
+            if (counter % 60 == 0) {
+              hour--;
+              checkMinute -= 59;
+            }
+          }
           counter--;
         });
       } else {
@@ -100,7 +109,6 @@ class _timerPageState extends State<timerPage> {
                   child: Container(
                     height: clockSize,
                     width: clockSize,
-                    padding: const EdgeInsets.all(14),
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       gradient: const LinearGradient(
@@ -125,18 +133,31 @@ class _timerPageState extends State<timerPage> {
                         ),
                       ],
                     ),
+                    //todo --------------------------> Circle
                     child: Stack(
                       alignment: Alignment.center,
                       children: [
                         Align(
                           alignment: Alignment.center,
-                          child: Text(
-                            // returnFormattedText(),
-                            '$counter',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                                fontSize: clockSize * 0.0975),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Padding(
+                                padding: EdgeInsets.only(top: clockSize * 0.1),
+                                child: Text(
+                                  '${(hour % 24).toString().padLeft(2, '0')} : ${(minute % 60).toString().padLeft(2, '0')} : ${(counter % 60).toString().padLeft(2, '0')}',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: clockSize * 0.13),
+                                ),
+                              ),
+                              Text(
+                                'Timer',
+                                style: TextStyle(
+                                    color: Colors.white70,
+                                    fontSize: clockSize * 0.07),
+                              ),
+                            ],
                           ),
                         ),
                         ...List.generate(
@@ -144,8 +165,8 @@ class _timerPageState extends State<timerPage> {
                           (index) => Transform.rotate(
                             angle: ((index) * 6 * pi) / 180,
                             child: VerticalDivider(
-                              indent: clockSize * 0.001,
-                              endIndent: clockSize * 0.9,
+                              indent: clockSize * 0.04,
+                              endIndent: clockSize * 0.935,
                               width: 20,
                               thickness: 3,
                               color: Colors.grey,
@@ -153,13 +174,15 @@ class _timerPageState extends State<timerPage> {
                           ),
                         ),
                         Container(
-                          margin: const EdgeInsets.all(2),
+                          margin: EdgeInsets.all(clockSize * 0.052),
                           height: clockSize,
                           width: clockSize,
                           child: CircularProgressIndicator(
                             color: Colors.white,
-                            value: 0.5,
-                            strokeWidth: 6,
+                            value: (divide == 0)
+                                ? 0
+                                : (counter.toDouble() / divide),
+                            strokeWidth: clockSize * 0.022,
                           ),
                         ),
                       ],
@@ -169,14 +192,32 @@ class _timerPageState extends State<timerPage> {
                 SizedBox(
                   height: height * 0.04,
                 ),
-                AnimatedContainer(
-                  duration: const Duration(milliseconds: 300),
-                  height: 51,
-                  width: 51,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: bgColor,
-                    boxShadow: [
+                // todo---------------------------------> +,- Button
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    GestureDetector(
+                      onTap: () {
+                        if (!_isTimerStart) {
+                          setState(() {
+                            counter = counter + 60;
+                            minute = minute + 1;
+                            if (minute % 60 == 0) {
+                              hour = hour + 1;
+                              checkMinute = minute - hour;
+                            }
+                            divide = counter.toDouble();
+                          });
+                        }
+                      },
+                      child: AnimatedContainer(
+                        duration: const Duration(milliseconds: 300),
+                        height: height * 0.07,
+                        width: width * 0.17,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: bgColor,
+                          boxShadow: [
                             const BoxShadow(
                               color: Colors.black,
                               blurRadius: 5,
@@ -190,16 +231,62 @@ class _timerPageState extends State<timerPage> {
                               offset: const Offset(2, 2),
                             ),
                           ],
-                  ),
-                  child: const Icon(
-                    Icons.add,
-                    color: Colors.white,
-                  ),
+                        ),
+                        child: const Icon(
+                          Icons.add,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        if (!_isTimerStart) {
+                          if (counter > 0) {
+                            setState(() {
+                              counter = counter - 60;
+                              minute = minute - 1;
+                              if (hour >= 1) {
+                                hour--;
+                              }
+                              divide = counter.toDouble();
+                            });
+                          }
+                        }
+                      },
+                      child: AnimatedContainer(
+                        duration: const Duration(milliseconds: 300),
+                        height: height * 0.07,
+                        width: width * 0.17,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: bgColor,
+                          boxShadow: [
+                            const BoxShadow(
+                              color: Colors.black,
+                              blurRadius: 5,
+                              spreadRadius: 1,
+                              offset: Offset(-2, -2),
+                            ),
+                            BoxShadow(
+                              color: Colors.grey.shade800,
+                              blurRadius: 5,
+                              spreadRadius: 1,
+                              offset: const Offset(2, 2),
+                            ),
+                          ],
+                        ),
+                        child: const Icon(
+                          Icons.remove,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 SizedBox(
-                  height: height * 0.12,
+                  height: height * 0.09,
                 ),
-                //todo -----------------------------------------------------> Start Button
+                //todo ---------------------------------> Start Button
                 (_isStart)
                     ? Padding(
                         padding: const EdgeInsets.only(left: 8, right: 8),
@@ -209,9 +296,8 @@ class _timerPageState extends State<timerPage> {
                               child: GestureDetector(
                                 onTap: () {
                                   setState(() {
-                                    counter = 0;
-                                    _isStart = false;
-                                    _isPause = false;
+                                    hour = minute = counter = 0;
+                                    _isStart = _isPause = _isTimerStart = false;
                                   });
                                 },
                                 child: AnimatedContainer(
@@ -301,6 +387,7 @@ class _timerPageState extends State<timerPage> {
                             if (counter != 0) {
                               _isStart = true;
                               startTimer();
+                              _isTimerStart = true;
                             }
                           });
                         },
@@ -348,14 +435,11 @@ class _timerPageState extends State<timerPage> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.of(context).pushNamed('/Timer');
+                        Navigator.of(context).pushNamed('/StopWatch');
                       },
                       child: bottomButton(Icons.timer_outlined, 2, 3),
                     ),
-                    GestureDetector(
-                      onTap: () {},
-                      child: bottomButton(Icons.alarm_outlined, 3, 3),
-                    ),
+                    bottomButton(Icons.alarm_outlined, 3, 3),
                     GestureDetector(
                       onTap: () {},
                       child: bottomButton(Icons.more_time_outlined, 4, 3),
@@ -372,5 +456,6 @@ class _timerPageState extends State<timerPage> {
   }
 }
 
-int round = 0;
-bool _isStart = false, _isPause = false;
+double divide = 0;
+int round = 0, counter = 0, minute = 0, hour = 0,checkMinute = 0;
+bool _isStart = false, _isPause = false, _isTimerStart = false;

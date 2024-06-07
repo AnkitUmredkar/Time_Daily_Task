@@ -126,12 +126,7 @@ class _MyClockState extends State<MyClock> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).pushNamed('/');
-                      },
-                      child: bottomButton(Icons.schedule_outlined, 1, 1),
-                    ),
+                    bottomButton(Icons.schedule_outlined, 1, 1),
                     GestureDetector(
                       onTap: () {
                         Navigator.of(context).pushNamed('/StopWatch');

@@ -24,10 +24,9 @@ class _timerPageState extends State<timerPage> {
             minute--;
           }
 
-          if (minute == checkMinute) {
+          if (minute % 60 == 59) {
             if (counter % 60 == 0) {
               hour--;
-              checkMinute -= 59;
             }
           }
           counter--;
@@ -204,7 +203,6 @@ class _timerPageState extends State<timerPage> {
                             minute = minute + 1;
                             if (minute % 60 == 0) {
                               hour = hour + 1;
-                              checkMinute = minute - hour;
                             }
                             divide = counter.toDouble();
                           });
@@ -457,5 +455,5 @@ class _timerPageState extends State<timerPage> {
 }
 
 double divide = 0;
-int round = 0, counter = 0, minute = 0, hour = 0,checkMinute = 0;
+int round = 0, counter = 0, minute = 0, hour = 0;
 bool _isStart = false, _isPause = false, _isTimerStart = false;

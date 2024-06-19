@@ -38,19 +38,19 @@ class _dropdownEffectState extends State<dropdownEffect> {
           ),
           items: const [
             DropdownMenuItem(
-              value: 0,
+              value: '1',
               child: Text('Hello', style: TextStyle(fontSize: 20)),
             ),
-            DropdownMenuItem<int>(
-              value: 1,
+            DropdownMenuItem(
+              value: '2',
               child: Text('surat', style: TextStyle(fontSize: 20)),
             ),
             DropdownMenuItem(
-              value: 2,
+              value: '3',
               child: Text('Ahmedabad', style: TextStyle(fontSize: 20)),
             ),
             DropdownMenuItem(
-              value: 3,
+              value: '4',
               child: Text('Vadodara', style: TextStyle(fontSize: 20)),
             ),
           ],
@@ -65,4 +65,4 @@ class _dropdownEffectState extends State<dropdownEffect> {
   }
 }
 
-int dropdownSelectedValue = 0;
+String dropdownSelectedValue = '1';

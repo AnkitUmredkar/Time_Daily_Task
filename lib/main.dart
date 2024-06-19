@@ -3,11 +3,15 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:practice_of_lecture/Clock_App/stop_watch.dart';
+import 'package:practice_of_lecture/Practice/ExamPractice/ID%20Card/showIdCard.dart';
 import 'package:practice_of_lecture/Practice/animated%20Search%20bar.dart';
+import 'package:practice_of_lecture/Practice/radio.dart';
 import 'package:practice_of_lecture/Timer%20App/digital_clock_page.dart';
 import 'package:practice_of_lecture/Timer_Daily_Task/digital_clock_app.dart';
 import 'Clock_App/timer.dart';
 import 'Practice/Chip/basic_chip.dart';
+import 'Practice/ExamPractice/ID Card/idcard.dart';
+import 'Practice/ExamPractice/Invoice Generator/homepage.dart';
 import 'Practice/dropdown_button.dart';
 import 'Clock_App/my.dart';
 import 'Timer App/analogue_clock_page.dart';
@@ -38,30 +42,38 @@ class MyApp extends StatelessWidget {
       //   '/StrapWatch': (context) => const StrapWatchPage(),
       // },
       //------> TODO Paste here
+      // routes: {
+      //   '/': (context) => const Idcard(),
+      //   '/show': (context) => const ShowCard(),
+      //   // '/StopWatch': (context) => const StopWatch(),
+      //   // '/Timer': (context) => const timerPage(),
+      // },
+
       routes: {
-        '/': (context) => const MyClock(),
-        '/StopWatch': (context) => const StopWatch(),
-        '/Timer': (context) => const timerPage(),
+        '/': (context) => const InvoiceHomePage(),
+        // '/show': (context) => const ShowCard(),
       },
     );
   }
 }
 
 // TODO for Slider
-//--->customSlider()
+//---> customSlider()
 // TODO for RangeSlider
-//--->customRangeSlider()
+//---> customRangeSlider()
 // TODO for DrpDownEffect
-//--->dropdownEffect()
+//---> dropdownEffect()
 // TODO for DrpDownEffect
-//--->dropdownEffect()
+//---> dropdownEffect()
+// TODO for RadioExample
+//---> RadioExample()
 // TODO for Flutter Buttons
-//--->Buttons()
+//---> Buttons()
 // TODO for Digital Clock App
-//--->DigitalClockApp()
+//---> DigitalClockApp()
 // TODO for Analog Clock App
-//--->AnalogClockApp()
+//---> AnalogClockApp()
 // TODO for Strap Watch App
-//--->StrapWatch()
+//---> StrapWatch()
 // TODO for ORG Clock
-//--->MyClock()
+//---> MyClock()

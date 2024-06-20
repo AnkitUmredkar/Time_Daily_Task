@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -6,6 +7,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:practice_of_lecture/Practice/ExamPractice/Invoice%20Generator/global.dart';
+import 'package:share_extend/share_extend.dart';
 
 class InvoiceHomePage extends StatefulWidget {
   const InvoiceHomePage({super.key});
@@ -168,34 +170,10 @@ class _InvoiceHomePageState extends State<InvoiceHomePage> {
               onPressed: () async {
                 RenderRepaintBoundary boundary = imgKey.currentContext!.findRenderObject() as RenderRepaintBoundary;
                 ui.Image image = await boundary.toImage();
-                ByteData byteData = await (image.toByteData);
+                ByteData? byteData = await (image.toByteData(format: ui.ImageByteFormat.png));
+                Uint8List img = byteData!.buffer.asUint8List();
+                ImageGallerySaver.saveImage(img);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                // RenderRepaintBoundary boundary = imgKey.currentContext!
-                //     .findRenderObject() as RenderRepaintBoundary;
-                // ui.Image image = await boundary.toImage();
-                // ByteData? byteData =
-                //     await (image.toByteData(format: ui.ImageByteFormat.png));
-                // Uint8List img = byteData!.buffer.asUint8List();
-                // ImageGallerySaver.saveImage(img);
                 Fluttertoast.showToast(
                   msg: 'Image Saved Successfully',
                   toastLength: Toast.LENGTH_SHORT,
@@ -208,6 +186,35 @@ class _InvoiceHomePageState extends State<InvoiceHomePage> {
               },
               child: Icon(
                 Icons.download,
+                color: Colors.white,
+              ),
+            ),
+            SizedBox(
+              width: 14,
+            ),
+            FloatingActionButton(
+              backgroundColor: Colors.blue,
+              onPressed: () async {
+                RenderRepaintBoundary boundary = imgKey.currentContext!.findRenderObject() as RenderRepaintBoundary;
+                ui.Image image = await boundary.toImage();
+                ByteData? byteData = await (image.toByteData(format: ui.ImageByteFormat.png));
+                Uint8List img = byteData!.buffer.asUint8List();
+                final path = getApplicationDocumentsDirectory();
+                File file = File("$path/img.png");
+                file.writeAsBytes(img);
+                ShareExtend.share(file.path, 'image');
+                Fluttertoast.showToast(
+                  msg: 'Success in Sharing',
+                  toastLength: Toast.LENGTH_SHORT,
+                  gravity: ToastGravity.BOTTOM,
+                  timeInSecForIosWeb: 2,
+                  backgroundColor: Colors.black,
+                  textColor: Colors.white,
+                  fontSize: 16,
+                );
+              },
+              child: Icon(
+                Icons.share,
                 color: Colors.white,
               ),
             ),
